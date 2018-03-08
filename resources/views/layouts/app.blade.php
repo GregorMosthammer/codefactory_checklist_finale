@@ -25,6 +25,13 @@
 
 <!-- Optional theme -->
 
+
+        
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -124,8 +131,8 @@ var x = setInterval(function() {
                         <!-- Authentication Links -->
 
                         @if (Auth::guard('admin')->check())
-                                    <li>
-                                        <a href="{{ route('logout') }}"
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             LOGOUT
@@ -157,7 +164,7 @@ var x = setInterval(function() {
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">checklist</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
                                
                                
                             
