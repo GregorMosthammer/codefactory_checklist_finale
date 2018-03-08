@@ -535,11 +535,19 @@ div.polaroid {
   .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
   .fa-anchor,.fa-coffee {font-size:200px}
   .w3-container{
-	  margin-top: -20px;
+	  
 	  color: white;
-	  background-color: #831213;
+	  background:  url(wien0.gif) no-repeat center center fixed; 
+  background-size: cover;
 	  
   }
+  .w3-contain{
+	padding:200px 16px;
+	color: white;
+	background:  url(wien0.gif) no-repeat center center fixed; 
+  background-size: cover;
+	
+}
   
   .welchead{
 	  font-size: 60px;
@@ -554,3 +562,27 @@ div.polaroid {
 	}
 	
 }
+
+
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+  }
+  .navbar-toggle .collapsed .icon-bar {
+    background-image: url("data:image/svg+xml;..");
+}
+.navbar-header>button>span {
+	
+	
+	background-color: white;
+	}
+
+
+	#nav1{
+		background-color: black;
+		color: white;
+	}

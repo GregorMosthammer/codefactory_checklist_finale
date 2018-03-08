@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -75,9 +76,17 @@ var x = setInterval(function() {
     </div>
 
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <div class="col-lg-7 col-md-7 col-sm-4 col-xs-4">
         <p id="timer"></p>
     </div>
+    <div class="col-lg-1 col-md-1 col-sm-4 col-xs-4">
+        
+    </div>
+    
+        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook"></a>
+    
+        <a href="https://twitter.com/CodeFactoryVIE" class="fa fa-twitter"></a>
+    
 
   </div>
 </nav>
@@ -86,7 +95,7 @@ var x = setInterval(function() {
 
 
     <div id="app">
-    <nav class="navbar navbar-inverse bg-inverse">
+    <nav id="nav1">
             <div class="container">
                 <div class="navbar-header">
 
@@ -99,8 +108,8 @@ var x = setInterval(function() {
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                    CodeFactory
+                    <a class="navbar-brand" style="color: white" href="{{ url('/') }}">
+                    CODEFACTORY
                     </a>
                 </div>
 
@@ -119,7 +128,7 @@ var x = setInterval(function() {
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            LOGOUT
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -129,26 +138,26 @@ var x = setInterval(function() {
                         @endif
                         
                         @if (Auth::guest())
-                        <li class="col-lg-4"><a href="{{ url('/login') }}">Login</a></li>
-                        <li class="col-lg-4"><a href="{{ url('/register') }}">Register</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="{{ url('/login') }}">LOGIN</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="{{ url('/register') }}">REGISTER</a></li>
                     
                         @else
                             
                                 
 
                                 
-                                    <li>
-                                        <a href="{{ route('logout') }}"
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            User Logout
+                                            USER LOGOUT
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li><a href="{{ url('/checklist') }}">checklist</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">checklist</a></li>
                                
                                
                             
