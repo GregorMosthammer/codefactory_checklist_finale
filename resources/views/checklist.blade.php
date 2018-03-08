@@ -184,14 +184,14 @@ var x = setInterval(function() {
     <div class="col-md-1"></div>
     <div class="col-md-10">
 
-    <div class="row">
+    <div style="margin-top: 40px" class="row polaroid">
     <div class="col-md-4">
     
-    <img src="/img\passport.jpg" alt="passport" width="320px"  height="250px">
+    <img id="checkimg" src="/img\passport.jpg" alt="passport" width="320px"  height="250px">
 
     </div>
     <div class="col-md-8">
-    <h4 style="color:red"><u>passport</u></h4>
+    <h3 style="color: #831213; font-family: Chivo !important;">passport</h3>
     
     <form action="/insert_passport" method="post" >{{csrf_field()}} 
     Do you have a passport? <br> 
@@ -206,15 +206,15 @@ var x = setInterval(function() {
     </div>
     </div>
 <hr>
-    <div class="row">
+    <div class="row polaroid">
     <div class="col-md-4">
   
-    <img src="/img\financing_insurance.jpg" alt="financing and insurance" width="320px"  height="250px">
+    <img id="checkimg" src="/img\financing_insurance.jpg" alt="financing and insurance" width="320px"  height="250px">
 
     </div>
     <div class="col-md-8">
 
-  <h4 style="color:red">financing and insurance</h4>
+  <h3 style="color: #831213; font-family: Chivo !important;">financing and insurance</h3>
 
 <form action="/insert_financing" method="post"> {{csrf_field()}}
 (You must have financing available or be approved for financing in order to obtain your VISA. 
@@ -270,14 +270,14 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
 
 <hr>
-<div class="row">
+<div class="row polaroid">
     <div class="col-md-4">
     
-    <img src="/img\visa.jpg" alt="visa" width="320px"  height="340px">
+    <img id="checkimg" src="/img\visa.jpg" alt="visa" width="320px"  height="340px">
 
     </div>
     <div class="col-md-8">
-    <h4 style="color:red">visa generell inoformation</h4>
+    <h3 style="color: #831213; font-family: Chivo !important;">visa generell inoformation</h3>
  
     This course is 4 months long and will require a D VISA. The application process can take up to 15 days. We recommend applying 2 months before the course start date.
    
@@ -297,15 +297,17 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     </div>
     </div>
 <hr>
-<div class="row">
+
+
+<div class="row polaroid">
     <div class="col-md-4">
     
-    <img src="/img\visa2.jpg" alt="visa" width="320px"  height="340px">
+    <img id="checkimg" src="/img\visa2.jpg" alt="visa" width="320px"  height="340px">
 
     </div>
     <div class="col-md-8">
+    <h3 style="color: #831213; font-family: Chivo !important;">You will need to check the follwing list to be able to enroll:</h3>
 
-<i> <b> You will need to check the follwing list to be able to enroll:</b></i>
 
   <form action="/insert_pass" method="post">{{csrf_field()}} 
   Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
@@ -429,10 +431,11 @@ Yes
 </form> 
 <br>
  Please see this page for more information <a href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
-    <br><center style="margin-top:20px;"><a href="{{route('sendEmail')}}" class="btn-lg btn-default">Enroll</a><center>
+    
     </div>
     </div>
-
+    
+    <center style="margin-bottom:40px;"><a href="{{route('sendEmail')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Enroll</a><center>
 
 
 
