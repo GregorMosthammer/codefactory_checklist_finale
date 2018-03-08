@@ -121,25 +121,23 @@
 
 
 
+
+
+
+
+
+
 <div class="row w3-contain w3-center">
-</div>
-
-
-
-
-
-<div class="row">
-    <div class="col-lg-offset-2 col-lg-6">
-        <h2 style="color: #831213; font-family: Chivo !important">Contact Us Here:</h2>
+    <div class="col-lg-offset-3 col-lg-6">
+        <h2 style="font-family: Chivo !important">Contact Us Here:</h2>
         <br>
         <h4><a href="https://www.facebook.com/CodeFactoryVienna/">https://www.facebook.com/CodeFactoryVienna/</a></h4>
         <h4><a href="office@codefactory.wien" target="_top">office@codefactory.wien</a></h4>
-        <h4 style="color: #831213;"><a  href="tel:+43-699-12255185">+43 699 12255185</a></h4>
+        <h4><a  href="tel:+43-699-12255185">+43 699 12255185</a></h4>
         
         
-    </div>
-    <div class="col-lg-2">
-    <img src="/img\logo.jpg" alt="LOGO" width="120px" height="120px">
+    
+    <img src="/img\logo.png" alt="LOGO" width="120px" height="120px">
     </div>
 </div>
 
