@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User;
 use App\Students;
 use Session;
 use View;
@@ -91,8 +92,9 @@ class MyAccountController extends Controller
     {
         // delete
      
-        $students = Students::find($id);
-        $students->delete();
+        $students = DB::table('students')->where('id', $id)->value('user_id');
+        $user = User::find($students);
+        $user->delete();
 
         // redirect
         Session::flash('message', 'Successfully deleted the nerd!');

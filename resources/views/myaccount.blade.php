@@ -102,18 +102,19 @@
 <div style="margin-top: 10px;" class="row">
 <div class="col-md-5">
 </div>
-<input class="btn-lg btn-primary col-md-2" type="submit" name="submit" value="Update">
-{{--<form action="{{ url('myaccount/' . $students->id )}}" method="post">
-            {{ method_field('DELETE') }}
-            {{ csrf_field() }}
-            <button class="btn-lg btn-primary col-md-2">DELETE</button>
-            </form> --}}
+<input class="btn-lg btn-primary col-md-2" type="submit" name="submit" value="UPDATE">
+
 </div>
 <div class="col-md-5">
 
 </div>
 
 </form> 
+<form action="{{ url('myaccount/' . $students->id )}}" method="post">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+            <button class="btn-lg btn-primary col-md-2">DELETE</button>
+            </form> 
 
 </div>
 
