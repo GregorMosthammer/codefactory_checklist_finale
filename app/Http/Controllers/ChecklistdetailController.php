@@ -86,7 +86,7 @@ class ChecklistdetailController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //ceciliatanzer
     }
 
     /**
@@ -100,7 +100,5 @@ class ChecklistdetailController extends Controller
         //
     }
 
-    public function yesNo(&$value){
-    $value = $value == true ? 'Yes' : 'No';
-}
+    
 }

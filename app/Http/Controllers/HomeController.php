@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
+use App\Students;
+use DB;
+use View;
+use Session;
 use Auth;
 use Mail;
 use App\Mail\checklistEnroll;
+use App\checklist;
 
 
 class HomeController extends Controller
@@ -32,19 +38,28 @@ class HomeController extends Controller
 
     public function email()
     {
-        Mail::to(Auth::user()->email)->send(new checklistEnroll());
+         $id = Auth::id();
+         $checklist = DB::table('checklist')->where('user_id', $id)->get()->toArray();
+        
+         if (in_array('0', $checklist))
+            {
+                    echo "Match found";
+            }
+         
+
+   /*     Mail::to(Auth::user()->email)->send(new checklistEnroll());
 
 
-$emails = ['christoph.pirringer@codefactory.wien'];
+        $emails = ['christoph.pirringer@codefactory.wien'];
 
 
-    Mail::send('emails.user.checklistEnroll', $emails, function($message) use ($emails)
+        Mail::send('emails.user.checklistEnroll', $emails, function($message) use ($emails)
 {    
     
-    $message->to($emails)->subject('Somebody Enroll');    
+        $message->to($emails)->subject('Somebody Enroll');    
 });
 
    
-        return redirect ('checklist');
+        return redirect ('checklist');*/
     }
 }
