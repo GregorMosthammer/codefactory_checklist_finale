@@ -2,18 +2,19 @@
 
 @section('content')
 
-{{--{{ Form::model($studentsnerd, array('route' => array('admin.update', $students->id), 'method' => 'PUT')) }}
 
- <div class="form-group">
-        {{ Form::label('firstname', 'Firstname') }}
-        {{ Form::text('firstname', null, array('class' => 'form-control')) }}
-    </div> --}}
 
+ 
+<div class="container-fluid">
 <form action="{{url('detail/' . $students->id )}}" method="post">
 
 
 {{method_field('PUT')}}
 {{csrf_field()}} 
+
+<div class="row" style="margin-bottom:5px">
+<a href="{{ url('/admin') }}" class="glyphicon btn btn-default"><b>&#xe091; Back to admin dashboard</b></a>
+</div>
 
 <div class="row">
 <div class="col-lg-6" class="form-group">
@@ -92,6 +93,7 @@
 <div class="col-md-5">
 </div>
 </form> 
+</div>
 
 
 

@@ -170,7 +170,7 @@
 <div class="col-md-5 col-xs-1">
 </div>
 
-<input class="btn-lg btn-default col-md-2 col-xs-10" type="submit" name"submit" value="Add">
+<input class="btn-lg btn-default col-md-2 col-xs-10" type="submit" name"submit" value="SUBMIT">
 
 <div class="col-md-5 col-xs-1">
 </div>

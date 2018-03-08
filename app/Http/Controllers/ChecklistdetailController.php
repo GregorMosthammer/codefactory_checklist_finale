@@ -99,4 +99,8 @@ class ChecklistdetailController extends Controller
     {
         //
     }
+
+    public function yesNo(&$value){
+    $value = $value == true ? 'Yes' : 'No';
+}
 }
