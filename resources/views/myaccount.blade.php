@@ -75,7 +75,7 @@
 </div>
 
 <div class="col-lg-6" class="form-group">
-    <label>Postelcode</label>
+    <label>Postalcode</label>
     <input type="number" class="form-control" value="{{$students->plz}}" name="plz">
 </div>
 </div>
@@ -94,7 +94,8 @@
 
 <div style="margin-top: 10px;" class="row">
 <div class="col-lg-12" class="form-group">
-<textarea class="form-control" value="{{$students->essay}}" name="essay" rows="5" cols="40" placeholder="please write a short essay"></textarea>
+<label>Essay</label>
+<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="please write a short essay">{{$students->essay}}</textarea>
 <input type="hidden"  value="{{$students->user_id}}" name="user_id">
 </div>
 </div>
@@ -114,7 +115,7 @@
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
             <button class="btn-lg btn-primary col-md-2">DELETE</button>
-            </form> 
+</form> 
 
 </div>
 

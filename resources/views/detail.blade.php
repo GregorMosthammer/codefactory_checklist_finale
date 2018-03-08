@@ -78,7 +78,8 @@
 
 <div style="margin-top: 10px;" class="row">
 <div class="col-lg-12" class="form-group">
-<textarea class="form-control" value="{{$students->essay}}" name="essay" rows="5" cols="40" ></textarea>
+<label>Essay</label>
+<textarea class="form-control" name="essay" rows="5" cols="40" >{{$students->essay}}</textarea>
 <input type="hidden"  value="{{$students->user_id}}" name="user_id">
 </div>
 </div>

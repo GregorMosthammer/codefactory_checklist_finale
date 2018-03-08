@@ -160,7 +160,8 @@
 
 <div style="margin-top: 10px;" class="row">
 <div class="col-lg-12" class="form-group">
-<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="please write us about your self"></textarea>
+ <label>Essay</label>
+<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="Please write a short description about where you are at in life and what do you hope to accomplish :)"></textarea>
 </div>
 </div>
 
