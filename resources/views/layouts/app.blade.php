@@ -102,7 +102,7 @@ var x = setInterval(function() {
 
 
     <div id="app">
-    <nav id="nav1">
+    <nav id="navcolors">
             <div class="container">
                 <div class="navbar-header">
 

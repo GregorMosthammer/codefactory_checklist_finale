@@ -133,8 +133,8 @@
         <h2 style="color: #831213; font-family: Chivo !important">Contact Us Here:</h2>
         <br>
         <h4><a href="https://www.facebook.com/CodeFactoryVienna/">https://www.facebook.com/CodeFactoryVienna/</a></h4>
-        <h4>office@codefactory.wien</h4>
-        <h4 style="color: #831213;">+43 699 12255185</h4>
+        <h4><a href="office@codefactory.wien" target="_top">office@codefactory.wien</a></h4>
+        <h4 style="color: #831213;"><a  href="tel:+43-699-12255185">+43 699 12255185</a></h4>
         
         
     </div>
