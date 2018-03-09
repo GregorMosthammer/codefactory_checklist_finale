@@ -84,6 +84,7 @@
     <div class="col-md-4">
     
     <img src="/img\passport.jpg" alt="passport" width="320px"  height="250px">
+    <img id="checkimg" src="/img\passport.jpg" alt="passport" width="100%"  height="100%">
 
     </div>
     <div class="col-md-8">
@@ -93,7 +94,7 @@
     -Do you have a passport? <br> 
     What you need for a passport 
     
-    <a href="https://www.usps.com/international/passports.htm" target="_blank">Link</a>
+    <a style="color:#831213;" href="https://www.usps.com/international/passports.htm" target="_blank">Link</a>
     <br>
     <label class="containe">
     Yes 
@@ -116,6 +117,7 @@
     <div class="col-md-4">
   
     <img src="/img\financing_insurance.jpg" alt="financing and insurance" width="320px"  height="250px">
+    <img id="checkimg" src="/img\financing_insurance.jpg" alt="financing and insurance" width="100%"  height="310px">
 
     </div>
     <div class="col-md-8" id="fina">
@@ -124,7 +126,7 @@
 
 <form action="/insert_financing#fina" method="post"> {{csrf_field()}}
 (You must have financing available or be approved for financing in order to obtain your VISA. 
-We recommend getting approved, getting your VISA, and then taking the loan out.) <a id="financingFadeIn">read more</a> 
+We recommend getting approved, getting your VISA, and then taking the loan out.) <a  style="color:#831213;" id="financingFadeIn">read more</a> 
 <br>
 <br>
 -I already have 18,500$ 
@@ -162,7 +164,7 @@ We recommend getting approved, getting your VISA, and then taking the loan out.)
 </form> 
 
 </div>
-</div>
+
   
 
 <div style="margin-top:10px;" class="row">
@@ -170,28 +172,30 @@ We recommend getting approved, getting your VISA, and then taking the loan out.)
 
 
 <div id="financingFade" style="display: none;">
+    <br>
 Since we are a coding bootcamp, traditional student financing is not an option. The best option is to obtain a ‘personal loan.’ We also recommend stating the purpose of the loan as “Travel.”  
     We recommend applying to your local bank first.
    Another good place to start is www.lendingtree.com Lending Tree also offers a free credit rating. <br>
    This websides hat may help you <ul>
-   <li> <a href="https://personalloans.com">personalloans.com</a></li>
- <li> <a href="https://www.lendingclub.com/loans/personal-loans">lendingclub.com</a></li>
- <li>  <a href="https://apply.santanderbank.com/personal/forms/ploan.aspx">santanderbank.com</a></li>
- <li> <a href="https://www.marcus.com/us/en">marcus.com</a></li>
+   <li> <a style="color:#831213;" href="https://personalloans.com">personalloans.com</a></li>
+ <li> <a style="color:#831213;" href="https://www.lendingclub.com/loans/personal-loans">lendingclub.com</a></li>
+ <li>  <a style="color:#831213;" href="https://apply.santanderbank.com/personal/forms/ploan.aspx">santanderbank.com</a></li>
+ <li> <a style="color:#831213;" href="https://www.marcus.com/us/en">marcus.com</a></li>
     <ul>
-   <a id="financingFadeUp"><center>close Info</center></a>
+   <a style="color:#831213;" id="financingFadeUp"><center>close Info</center></a>
 
 </div>
 
 </div>
 </div>
-
+</div>
 
 <hr>
 <div class="row">
     <div class="col-md-4">
     
     <img src="/img\visa.jpg" alt="visa" width="320px"  height="340px">
+    <img id="checkimg" src="/img\visa2.jpg" alt="visa" width="100%"  height="380px">
 
     </div>
     <div class="col-md-8">
@@ -208,7 +212,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
  You will need the following:
  <ul>
       <li>Proof of financing. Once approved by a bank you will need the letter of approval. We recommend not taking the loan out until after you have received your VISA.</li>
-      <li>The Consular Fee:<a href="http://www.austria.org/consular-fees"> consular-fees</a></li>
+      <li>The Consular Fee:<a style="color:#831213;" href="http://www.austria.org/consular-fees"> consular-fees</a></li>
       <li>ALL visa applicants must appear in person at the Austrian Embassy/Consulate. The Austrian Embassy and Consulates General do not accept visa applications by mail.</li>
       <li>If you wish to have your documents returned by U.S. mail, please enclose a self-addressed, stamped envelope (including the Certified Mail Receipt) with your application. The Austrian Embassy or Consulate General is not responsible for documents after they are mailed.</li>
       </ul>
@@ -219,6 +223,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     <div class="col-md-4">
     
     <img src="/img\visa2.jpg" alt="visa" width="320px"  height="340px">
+    <img id="checkimg" src="/img\visa.jpg" alt="visa" width="100%"  height="100%">
 
     </div>
     <div class="col-md-8" id="visa">
@@ -241,11 +246,33 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
                          <span class="checkmark"></span>
                           </label>
 </form> 
+
+
+
+
+<br>
+</div>
+    <div class="col-md-6">
+<form action="/insert_travelinsurance#visa" method="post">{{csrf_field()}}
+
+        -Proof of travel insurance or health/accident insurance providing coverage in the Schengen countries: stating name of insurance company, type of coverage (sickness, accident, medical evacuation, repatriation of human remains), amount of coverage (minimum USD 50,000) and option of direct payment (insurance company must have a service provider in the Schengen area or an arrangement with a service provider in the Schengen area; no deductible, no reimbursement policy accepted) (We will provide this with the itinerary.)
+        <br>
+        <label class="containe">Yes 
+<input type="checkbox"  name="travelinsurance"  value="1"  onchange="this.form.submit()"
+                          {{ $checklist[0]->travelinsurance == '1' ? 'checked' : '' }} >
+                          <span class="checkmark"></span>
+                          </label>
+                          <label class="containe"> No
+<input type="checkbox"  name="travelinsurance"  value="0"  onchange="this.form.submit()"
+                         {{ $checklist[0]->travelinsurance == '0' ? 'checked' : '' }} >
+                         <span class="checkmark"></span>
+                          </label>
+</form>
 <br>
 
 <form action="/insert_visaform#visa" method="post">{{csrf_field()}} 
 
-    <a href="https://static1.squarespace.com/static/54b9309be4b06e38ad5da1ca/t/55e75a54e4b0c94c8afbdc59/1441225300774/Formular_D_Antrag.pdf">-D VISA Form</a>
+    <a style="color:#831213;" href="https://static1.squarespace.com/static/54b9309be4b06e38ad5da1ca/t/55e75a54e4b0c94c8afbdc59/1441225300774/Formular_D_Antrag.pdf">-D VISA Form</a>
     <br>
     <label class="containe"> Yes 
 <input type="checkbox"  name="visaform"  value="1"  onchange="this.form.submit()"
@@ -259,7 +286,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 </form> 
 
 <br>
- <form action="/insert_picture#visa" method="post">{{csrf_field()}}
+ <form action="/insert_picture#visa1" method="post">{{csrf_field()}}
  -One (1) recent passport picture, which strictly has to meet the following criteria: max. head size 1.4 inch (36 mm), min. eye distance 0.3 inch (8mm), american picture format accepted.
  <br>
  <label class="containe"> Yes 
@@ -275,7 +302,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 </form> 
 <br>
 
-<form action="/insert_travelreservation#visa" method="post">{{csrf_field()}}
+<form action="/insert_travelreservation#visa1" method="post">{{csrf_field()}}
 
         -Travel itinerary/ airline reservation (showing dates of travel) for entire journey. (These do not need to be booked. We will provide you with an itinerary.)
         <br>
@@ -291,6 +318,8 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
                           </label>
 </form> 
 <br>
+</div>
+    <div class="col-md-6">
 
 <form action="/insert_hotelreservation#visa" method="post">{{csrf_field()}}
 
@@ -328,22 +357,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
                           </label>
 </form> 
 
-<br>
-<form action="/insert_travelinsurance#visa" method="post">{{csrf_field()}}
 
-        -Proof of travel insurance or health/accident insurance providing coverage in the Schengen countries: stating name of insurance company, type of coverage (sickness, accident, medical evacuation, repatriation of human remains), amount of coverage (minimum USD 50,000) and option of direct payment (insurance company must have a service provider in the Schengen area or an arrangement with a service provider in the Schengen area; no deductible, no reimbursement policy accepted) (We will provide this with the itinerary.)
-        <br>
-        <label class="containe">Yes 
-<input type="checkbox"  name="travelinsurance"  value="1"  onchange="this.form.submit()"
-                          {{ $checklist[0]->travelinsurance == '1' ? 'checked' : '' }} >
-                          <span class="checkmark"></span>
-                          </label>
-                          <label class="containe"> No
-<input type="checkbox"  name="travelinsurance"  value="0"  onchange="this.form.submit()"
-                         {{ $checklist[0]->travelinsurance == '0' ? 'checked' : '' }} >
-                         <span class="checkmark"></span>
-                          </label>
-</form>
 
 
 
@@ -402,8 +416,8 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
                           </label>
 </form> 
 <br>
- -Please see this page for more information <a href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
-    
+ -Please see this page for more information <a style="color:#831213;" href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
+ 
     </div>
     </div>
     </div>
@@ -431,6 +445,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     <div class="col-md-1">
     </div>
   </div>
+</div>
 </div>
 
 @if (alert()->ready())
