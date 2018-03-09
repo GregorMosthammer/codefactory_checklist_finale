@@ -13,22 +13,40 @@
         </div>
        
         <div class="row">
-          <p>
-            <strong>passport:</strong> {{ $checklist->passport }}<br>
-            <strong>financing:</strong> {{ $checklist->financing }}<br>
-            <strong>insurance:</strong> {{ $checklist->insurance }}<br>
-            <strong>visaform:</strong> {{ $checklist->visaform }}<br>
-            <strong>picture:</strong> {{ $checklist->picture }}<br>
-            <strong>travelreservation:</strong> {{ $checklist->travelreservation }}<br>
-            <strong>hotelreservation:</strong> {{ $checklist->hotelreservation }}<br>
-            <strong>employment:</strong> {{ $checklist->employment }}<br>
-            <strong>travelinsurance:</strong> {{ $checklist->travelinsurance }}<br>
-            <strong>financial_means:</strong> {{ $checklist->financial_means }}<br>
-            <strong>passcopy:</strong> {{ $checklist->passcopy }}<br>
-            <strong>passconsularfeecopy:</strong> {{ $checklist->consularfee }}<br>
-          </p>
+        <b><h3 style="color:blue;">1 is for yes, 0 for no ;)</h3></b>
+            <p> 
+            <strong>Passport:</strong>{{ $checklist->passport }}<br>
+            <strong>Financing:</strong>{{ $checklist->financing }}<br>
+            <strong>Insurance:</strong>{{ $checklist->insurance }}<br>
+            <strong>Visaform:</strong> {{ $checklist->visaform }}<br>
+            <strong>Picture:</strong>{{ $checklist->picture }}<br>
+            <strong>Travelreservation:</strong> {{ $checklist->travelreservation }}<br>
+            <strong>Hotelreservation:</strong>{{ $checklist->hotelreservation }}<br>
+            <strong>Employment:</strong>{{ $checklist->employment }}<br>
+            <strong>Travelinsurance:</strong> {{ $checklist->travelinsurance }}<br>
+            <strong>Financial means:</strong> {{ $checklist->financial_means }}<br>
+            <strong>Passport copy:</strong> {{ $checklist->passcopy }}<br>
+            <strong>Consularfee:</strong> {{ $checklist->consularfee }}
+          
              <input type="hidden"  value="{{$checklist->user_id}}" name="user_id">
+          </p>
         </div>
 </div>
+
+
+<script>
+
+    window.onload =function myFunction(){
+    x = document.getElementsByClassName("change");
+    for( var i=0; i < x.length; i++){
+    if ( x = '0'){
+        x[i].innerText="not checked";
+    }else{
+        x[i].innerText="checked"; 
+    }}
+}
+
+
+</script>
 
 @endsection
