@@ -1,197 +1,93 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Laravel</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/app.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
     
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-
-
-        
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Apr 9, 2018 09:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="timer"
-    document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "EXPIRED";
-    }
-}, 1000);
-</script>
-
-</head>
-<body>
-
-
+   
+   
+    </head>
+    <body>
 <nav class="navbar navbar-light bg-faded">
   <div class="row">
-    <div class="col-lg-offset-1 col-lg-1 col-md-1 col-sm-4 col-xs-4">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="/img\logo.png" alt="LOGO" width="100%" height="50px">
-        </a>
-    </div>
-
-
-    <div class="col-lg-7 col-md-7 col-sm-4 col-xs-4">
-        <p id="timer"></p>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-4 col-xs-4">
-        
-    </div>
-    
-        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook"></a>
-    
-        <a href="https://twitter.com/CodeFactoryVIE" class="fa fa-twitter"></a>
-    
-
+  <div class="col-lg-offset-1 col-lg-1 col-md-1 col-sm-4 col-xs-4">
+  <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="/img\logo.jpg" alt="LOGO" width="100%" height="50px">
+</a>
+  </div>
   </div>
 </nav>
-
-
-
-
     <div id="app">
-    <nav id="navcolors">
+    <nav class="navbar navbar-inverse bg-inverse">
             <div class="container">
                 <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <a class="navbar-brand" href="{{ url('/') }}">
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" style="color: white" href="{{ url('/') }}">
-                    CODEFACTORY
+                    CodeFactory
+
                     </a>
                 </div>
-
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
+
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-
-                        @if (Auth::guard('admin')->check())
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            LOGOUT
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                        @endif
-                        
                         @if (Auth::guest())
-                        <li class="nav-item active"><a class="nav-link" href="{{ url('/login') }}">LOGIN</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="{{ url('/register') }}">REGISTER</a></li>
+                        <li class="col-lg-4"><a href="{{ url('/login') }}">Login</a></li>
+                        <li class="col-lg-4"><a href="{{ url('/register') }}">Register</a></li>
                     
                         @else
-                            
-                                
-
-                                
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="{{ route('logout') }}"
+                                    <li>
+                                        <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            USER LOGOUT
+                                            Logout
                                         </a>
-
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
-                                    <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">MY ACCOUNT</a></li>
-                               
-                            
+                                    <li><a href="{{ url('/checklist') }}">checklist</a></li>
+                                    <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">myaccount</a></li>
                         @endif
                     </ul>
                 </div>
             </div>
         </nav>
-
-        @yield('content')
     </div>
-                                    
-                      
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
 
-    <div style="margin-top: 40px" class="row polaroid">
+    <div class="row">
     <div class="col-md-4">
     
-    <img id="checkimg" src="/img\passport.jpg" alt="passport" width="320px"  height="250px">
+    <img src="/img\passport.jpg" alt="passport" width="320px"  height="250px">
 
     </div>
     <div class="col-md-8">
-    <h3 style="color: #831213; font-family: Chivo !important;">passport</h3>
+    <h4 style="color:red"><u>passport</u></h4>
     
     <form action="/insert_passport" method="post" >{{csrf_field()}} 
     -Do you have a passport? <br> 
@@ -216,15 +112,15 @@ var x = setInterval(function() {
     </div>
     </div>
 <hr>
-    <div class="row polaroid">
+    <div class="row">
     <div class="col-md-4">
   
-    <img id="checkimg" src="/img\financing_insurance.jpg" alt="financing and insurance" width="320px"  height="250px">
+    <img src="/img\financing_insurance.jpg" alt="financing and insurance" width="320px"  height="250px">
 
     </div>
     <div class="col-md-8" id="fina">
 
-  <h3 style="color: #831213; font-family: Chivo !important;">financing and insurance</h3>
+  <h4 style="color:red">financing and insurance</h4>
 
 <form action="/insert_financing#fina" method="post"> {{csrf_field()}}
 (You must have financing available or be approved for financing in order to obtain your VISA. 
@@ -292,14 +188,14 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
 
 <hr>
-<div class="row polaroid">
+<div class="row">
     <div class="col-md-4">
     
-    <img id="checkimg" src="/img\visa.jpg" alt="visa" width="320px"  height="340px">
+    <img src="/img\visa.jpg" alt="visa" width="320px"  height="340px">
 
     </div>
     <div class="col-md-8">
-    <h3 style="color: #831213; font-family: Chivo !important;">visa generell inoformation</h3>
+    <h4 style="color:red">visa generell inoformation</h4>
  
     This course is 4 months long and will require a D VISA. The application process can take up to 15 days. We recommend applying 2 months before the course start date.
    
@@ -319,17 +215,17 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     </div>
     </div>
 <hr>
-
-
-<div class="row polaroid">
+<div class="row">
     <div class="col-md-4">
     
-    <img id="checkimg" src="/img\visa2.jpg" alt="visa" width="320px"  height="340px">
+    <img src="/img\visa2.jpg" alt="visa" width="320px"  height="340px">
 
     </div>
     <div class="col-md-8" id="visa">
     <h3 style="color: #831213; font-family: Chivo !important;">You will need to check the follwing list to be able to enroll:</h3>
+    <div class="col-md-8">
 
+<i> <b> You will need to check the follwing list to be able to enroll:</b></i>
 
   <form action="/insert_pass#visa" method="post">{{csrf_field()}} 
   -Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
@@ -523,6 +419,10 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
 
 
+ Please see this page for more information <a href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
+    <br><center style="margin-top:20px;"><a href="{{route('sendEmail')}}" class="btn-lg btn-default">Enroll</a><center>
+    </div>
+    </div>
 
 
 
@@ -532,6 +432,16 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     </div>
   </div>
 </div>
+
+@if (alert()->ready())
+    <script>
+        swal({
+            title: "{!! alert()->message() !!}",
+            type: "{!! alert()->type() !!}",
+        });
+    </script>
+@endif
+
 
 
 </body>

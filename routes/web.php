@@ -71,6 +71,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/email', 'HomeController@email')->name('sendEmail');
+Route::get('/email2', 'HomeController@email2');
+Route::post('/email2', 'HomeController@email2');
+
 
 
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
