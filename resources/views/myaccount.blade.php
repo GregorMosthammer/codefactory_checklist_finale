@@ -103,7 +103,14 @@
 <div style="margin-top: 10px;" class="row">
 <div class="col-md-5">
 </div>
-<input class="btn-lg btn-primary col-md-2" type="submit" name="submit" value="UPDATE">
+
+<form method="post" type="submit" name="submit" value="UPDATE">
+            
+            {{ csrf_field() }}
+            <button class="btn draw-border">UPDATE</button>
+</form> 
+
+
 
 </div>
 <div class="col-md-5">
@@ -114,8 +121,9 @@
 <form action="{{ url('myaccount/' . $students->id )}}" method="post">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
-            <button class="btn-lg btn-primary col-md-2">DELETE</button>
+            <button class="btn draw-border">DELETE</button>
 </form> 
+
 
 </div>
 

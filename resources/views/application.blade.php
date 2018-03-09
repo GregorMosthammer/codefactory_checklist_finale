@@ -271,10 +271,18 @@ var x = setInterval(function() {
 
 <div style="margin-top: 10px;" class="row">
 
-<div class="col-md-5 col-xs-1">
-</div>
 
-<input class="btn-lg btn-default col-md-2 col-xs-10" type="submit" name"submit" value="SUBMIT">
+
+
+
+<form style="text-align:center; margin-bottom: 20px">
+            
+            {{ csrf_field() }}
+            <button type="submit" name"submit" class="btn draw-border">SUBMIT</button>
+            </form>
+
+
+
 
 <div class="col-md-5 col-xs-1">
 </div>

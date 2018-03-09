@@ -511,9 +511,12 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     </div>
     </div>
     </div>
+    <form style="text-align:center; margin-bottom: 20px" action="{{route('sendEmail')}}">
+            
+            {{ csrf_field() }}
+            <button class="btn draw-border">ENROLL</button>
+            </form>
     
-    <center style="margin-bottom:40px;"><a href="{{route('sendEmail')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Enroll</a><center>
-
 
 
 
