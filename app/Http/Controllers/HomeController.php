@@ -12,6 +12,7 @@ use Auth;
 use Mail;
 use App\Mail\checklistEnroll;
 use App\checklist;
+use Confirm;
 
 
 class HomeController extends Controller
@@ -39,14 +40,34 @@ class HomeController extends Controller
     public function email()
     {
          $id = Auth::id();
-         $checklist = DB::table('checklist')->where('user_id', $id)->get()->toArray();
+         $checklist = checklist::where('user_id', '=', $id)->get();
         
-         if (in_array('0', $checklist))
-            {
-                    echo "Match found";
-            }
-         
+        
+        
+       // var_dump($checklist);
+        // exit();
+        
+         if ($checklist->contains('passport','0') || $checklist->contains('passport','') ||
+             $checklist->contains('financing','0') || $checklist->contains('financing','') ||
+             $checklist->contains('insurance','0') || $checklist->contains('insurance','') ||
+             $checklist->contains('pass','0') || $checklist->contains('pass','') ||
+             $checklist->contains('visaform','0') || $checklist->contains('visaform','') ||
+             $checklist->contains('picture','0') || $checklist->contains('picture','') ||
+             $checklist->contains('travelreservation','0') || $checklist->contains('travelreservation','') ||
+             $checklist->contains('hotelreservation','0') || $checklist->contains('hotelreservation','') ||
+             $checklist->contains('employment','0') || $checklist->contains('employment','') ||
+             $checklist->contains('travelinsurance','0') || $checklist->contains('travelinsurance','') ||
+             $checklist->contains('financial_means','0') || $checklist->contains('financial_means','') ||
+             $checklist->contains('passcopy','0') || $checklist->contains('passcopy','') ||
+             $checklist->contains('consularfee','0') || $checklist->contains('consularfee','')
 
+
+              )
+            {
+                     echo "Match found";
+            }else{echo "Match NOT found"; }   
+         
+ 
    /*     Mail::to(Auth::user()->email)->send(new checklistEnroll());
 
 
