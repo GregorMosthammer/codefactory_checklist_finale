@@ -90,9 +90,9 @@ var x = setInterval(function() {
         
     </div>
     
-        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook"></a>
+        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
     
-        <a href="https://twitter.com/CodeFactoryVIE" class="fa fa-twitter"></a>
+        <a href="https://twitter.com/CodeFactoryVIE" class="fa fa-twitter" target="_blank"></a>
     
 
   </div>

@@ -88,7 +88,7 @@
 <div style="margin-top: 10px;" class="row">
 <div class="col-md-5">
 </div>
-<input class="btn-lg btn-primary col-md-2" type="submit" name="submit" value="Update">
+<input class="btn draw-border" type="submit" name="submit" value="Update">
 </div>
 <div class="col-md-5">
 </div>

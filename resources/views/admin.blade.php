@@ -90,9 +90,9 @@ var x = setInterval(function() {
         
     </div>
     
-        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook"></a>
+        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
     
-        <a href="https://twitter.com/CodeFactoryVIE" class="fa fa-twitter"></a>
+        <a href="https://twitter.com/CodeFactoryVIE" class="fa fa-twitter" target="_blank"></a>
     
 
   </div>
@@ -185,7 +185,7 @@ var x = setInterval(function() {
 
 @if (Auth::guard('admin')->check())
 <div class="container">
-<div class="row">
+{{--<div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">ADMIN Dashboard</div>
@@ -196,7 +196,7 @@ var x = setInterval(function() {
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
 
   <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
@@ -248,7 +248,7 @@ $(document).ready(function() {
         "pageLength": 20,
         "order": [[ 1, "desc" ]]
     });
-    $('#example_length select').prepend("<option value=\"5\" selected>5</option>"); 
+    $('#example_length select').prepend("<option value=\"10\" selected>5</option>"); 
 } );
 
 </script>
