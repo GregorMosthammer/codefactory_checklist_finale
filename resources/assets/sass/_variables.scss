@@ -589,4 +589,153 @@ div.polaroid {
 		background-color: black;
 		color: white;
 	}
+
+
+
+
+
+
+
+	.containe {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 14px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		
+	}
+	
+	/* Hide the browser's default checkbox */
+	.containe input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+	
+	/* Create a custom checkbox */
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		background-color: #eee;
+		border: 1px solid black;
+	}
+	
+	/* On mouse-over, add a grey background color */
+	.containe:hover input ~ .checkmark {
+		background-color: #831213;
+		
+	}
+	
+	/* When the checkbox is checked, add a blue background */
+	.containe input:checked ~ .checkmark {
+		background-color: none;
+		border: 1px solid black;
+	}
+	
+	/* Create the checkmark/indicator (hidden when not checked) */
+	.checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+	
+	/* Show the checkmark when checked */
+	.containe input:checked ~ .checkmark:after {
+		display: block;
+	}
+	
+	/* Style the checkmark/indicator */
+	.containe .checkmark:after {
+		left: 9px;
+		top: 4px;
+		width: 7px;
+		height: 13px;
+		border: solid #831213;
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+
+
+
+
+
+	@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+		box-shadow: inset 0 0 0 $width $color;
+		color: $color;
+		transition: color $duration $duration/3;
+		position: relative;
+		
+		&::before,
+		&::after {
+		  border: 0 solid transparent;
+		  box-sizing: border-box;
+		  content: '';
+		  pointer-events: none;
+		  position: absolute;
+		  width: 0; height: 0;
+		  
+		  #{$vertical}: 0; 
+		  #{$horizontal}: 0;
+		}
+	  
+		&::before {
+		  $h-side: if($horizontal == 'left', 'right', 'left');
+		  
+		  border-#{$vertical}-width: $width;
+		  border-#{$h-side}-width: $width;
+		}
+		
+		&::after {
+		  $v-side: if($vertical == 'top', 'bottom', 'top');
+		  
+		  border-#{$v-side}-width: $width;
+		  border-#{$horizontal}-width: $width;
+		}
+		
+		&:hover {
+		  color: $hover;
+		  
+		  &::before,
+		  &::after {
+			border-color: $hover;
+			transition: border-color 0s, width $duration, height $duration;
+			width: 100%;
+			height: 100%;
+		  }
+		  
+		  &::before { transition-delay: 0s, 0s, $duration; }
+		  
+		  &::after { transition-delay: 0s, $duration, 0s; }
+		}
+	  }
+	  
+	  .draw-border {
+		@include btn-border-drawing(black, #831213, 4px, bottom, right);
+	  }
+	  
+	  //=== Button styling, semi-ignore
+	  .btn {
+		background: none;
+		border: none;
+		cursor: pointer;
+		line-height: 1.5;
+		font: 700 1.2rem 'Roboto Slab', sans-serif;
+		padding: 1em 2em;
+		letter-spacing: 0.05rem;
+		
+		&:focus { outline: 2px dotted #55d7dc; }
+	  }
+	  
+	  
 	
