@@ -194,8 +194,11 @@ var x = setInterval(function() {
     <h3 style="color: #831213; font-family: Chivo !important;">passport</h3>
     
     <form action="/insert_passport" method="post" >{{csrf_field()}} 
-    Do you have a passport? <br> 
-    What you need for a passport <a href="https://www.usps.com/international/passports.htm" target="_blank">Link</a>
+    -Do you have a passport? <br> 
+    What you need for a passport 
+    
+    <a href="https://www.usps.com/international/passports.htm" target="_blank">Link</a>
+    <br>
     Yes 
             <input type="checkbox"  name="passport"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->passport == '1' ? 'checked' : '' }} >
@@ -212,15 +215,17 @@ var x = setInterval(function() {
     <img id="checkimg" src="/img\financing_insurance.jpg" alt="financing and insurance" width="320px"  height="250px">
 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8" id="fina">
 
   <h3 style="color: #831213; font-family: Chivo !important;">financing and insurance</h3>
 
-<form action="/insert_financing" method="post"> {{csrf_field()}}
+<form action="/insert_financing#fina" method="post"> {{csrf_field()}}
 (You must have financing available or be approved for financing in order to obtain your VISA. 
 We recommend getting approved, getting your VISA, and then taking the loan out.) <a id="financingFadeIn">read more</a> 
 <br>
-I already have 18,500$ 
+<br>
+-I already have 18,500$ 
+<br>
 
                         Yes 
             <input type="checkbox"  name="financing"  value="1"  onchange="this.form.submit()"
@@ -232,8 +237,9 @@ I already have 18,500$
 <br>
 <div id="one"></div>
 
-<form action="/insert_insurance" method="post"> {{csrf_field()}}
-Insurance form filled out?
+<form action="/insert_insurance#fina" method="post"> {{csrf_field()}}
+-Insurance form filled out?
+<br>
 
                         Yes 
             <input type="checkbox"  name="insurance"  value="1"  onchange="this.form.submit()"
@@ -305,13 +311,13 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     <img id="checkimg" src="/img\visa2.jpg" alt="visa" width="320px"  height="340px">
 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8" id="visa">
     <h3 style="color: #831213; font-family: Chivo !important;">You will need to check the follwing list to be able to enroll:</h3>
 
 
-  <form action="/insert_pass" method="post">{{csrf_field()}} 
-  Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
-Yes 
+  <form action="/insert_pass#visa" method="post">{{csrf_field()}} 
+  -Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
+  <br>Yes 
 <input type="checkbox"  name="pass"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->pass == '1' ? 'checked' : '' }} >
                           No
@@ -320,10 +326,10 @@ Yes
 </form> 
 <br>
 
-<form action="/insert_visaform" method="post">{{csrf_field()}} 
+<form action="/insert_visaform#visa" method="post">{{csrf_field()}} 
 
-    <a href="https://static1.squarespace.com/static/54b9309be4b06e38ad5da1ca/t/55e75a54e4b0c94c8afbdc59/1441225300774/Formular_D_Antrag.pdf">D VISA Form</a>
-Yes 
+    <a href="https://static1.squarespace.com/static/54b9309be4b06e38ad5da1ca/t/55e75a54e4b0c94c8afbdc59/1441225300774/Formular_D_Antrag.pdf">-D VISA Form</a>
+    <br>Yes 
 <input type="checkbox"  name="visaform"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->visaform == '1' ? 'checked' : '' }} >
                           No
@@ -332,9 +338,9 @@ Yes
 </form> 
 
 <br>
- <form action="/insert_picture" method="post">{{csrf_field()}}
- One (1) recent passport picture, which strictly has to meet the following criteria: max. head size 1.4 inch (36 mm), min. eye distance 0.3 inch (8mm), american picture format accepted.
-        Yes 
+ <form action="/insert_picture#visa" method="post">{{csrf_field()}}
+ -One (1) recent passport picture, which strictly has to meet the following criteria: max. head size 1.4 inch (36 mm), min. eye distance 0.3 inch (8mm), american picture format accepted.
+ <br>Yes 
 <input type="checkbox"  name="picture"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->picture == '1' ? 'checked' : '' }} >
                           No
@@ -343,10 +349,10 @@ Yes
 </form> 
 <br>
 
-<form action="/insert_travelreservation" method="post">{{csrf_field()}}
+<form action="/insert_travelreservation#visa" method="post">{{csrf_field()}}
 
-        Travel itinerary/ airline reservation (showing dates of travel) for entire journey. (These do not need to be booked. We will provide you with an itinerary.)
-        Yes 
+        -Travel itinerary/ airline reservation (showing dates of travel) for entire journey. (These do not need to be booked. We will provide you with an itinerary.)
+        <br>Yes 
 <input type="checkbox"  name="travelreservation"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->travelreservation == '1' ? 'checked' : '' }} >
                           No
@@ -355,10 +361,10 @@ Yes
 </form> 
 <br>
 
-<form action="/insert_hotelreservation" method="post">{{csrf_field()}}
+<form action="/insert_hotelreservation#visa" method="post">{{csrf_field()}}
 
-Hotel reservation. (We will include this in our itinerary.)
-Yes 
+-Hotel reservation. (We will include this in our itinerary.)
+<br>Yes 
 <input type="checkbox"  name="hotelreservation"  value="1"  onchange="this.form.submit()"
                   {{ $checklist[0]->hotelreservation == '1' ? 'checked' : '' }} >
                   No
@@ -370,10 +376,10 @@ Yes
 
 
 <br>
-<form action="/insert_employment" method="post">{{csrf_field()}}
+<form action="/insert_employment#visa" method="post">{{csrf_field()}}
 
-        Letter of employment in the U.S.
-        Yes 
+        -Letter of employment in the U.S.
+        <br>Yes 
 <input type="checkbox"  name="employment"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->employment == '1' ? 'checked' : '' }} >
                           No
@@ -382,22 +388,27 @@ Yes
 </form> 
 
 <br>
-<form action="/insert_travelinsurance" method="post">{{csrf_field()}}
+<form action="/insert_travelinsurance#visa" method="post">{{csrf_field()}}
 
-        Proof of travel insurance or health/accident insurance providing coverage in the Schengen countries: stating name of insurance company, type of coverage (sickness, accident, medical evacuation, repatriation of human remains), amount of coverage (minimum USD 50,000) and option of direct payment (insurance company must have a service provider in the Schengen area or an arrangement with a service provider in the Schengen area; no deductible, no reimbursement policy accepted) (We will provide this with the itinerary.)
-        Yes 
+        -Proof of travel insurance or health/accident insurance providing coverage in the Schengen countries: stating name of insurance company, type of coverage (sickness, accident, medical evacuation, repatriation of human remains), amount of coverage (minimum USD 50,000) and option of direct payment (insurance company must have a service provider in the Schengen area or an arrangement with a service provider in the Schengen area; no deductible, no reimbursement policy accepted) (We will provide this with the itinerary.)
+        <br>Yes 
 <input type="checkbox"  name="travelinsurance"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->travelinsurance == '1' ? 'checked' : '' }} >
                           No
 <input type="checkbox"  name="travelinsurance"  value="0"  onchange="this.form.submit()"
                          {{ $checklist[0]->travelinsurance == '0' ? 'checked' : '' }} >
-</form> 
+</form>
 
+
+
+
+
+<div id="visa1">
 <br>
-<form action="/insert_financial_means" method="post">{{csrf_field()}}
+<form action="/insert_financial_means#visa1" method="post">{{csrf_field()}}
 
-        Proof of financial means (e.g. scholarship, letter of grants, bank statement of last two months, other proof of income). Include the letter of approval from the bank.
-        Yes 
+        -Proof of financial means (e.g. scholarship, letter of grants, bank statement of last two months, other proof of income). Include the letter of approval from the bank.
+        <br>Yes 
 <input type="checkbox"  name="financial_means"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->financial_means == '1' ? 'checked' : '' }} >
                           No
@@ -407,10 +418,10 @@ Yes
 <br>
 
 
-<form action="/insert_passcopy" method="post">{{csrf_field()}}
+<form action="/insert_passcopy#visa1" method="post">{{csrf_field()}}
 
-        Copy of the passport and copy of the "Green Card" or US visa
-        Yes 
+        -Copy of the passport and copy of the "Green Card" or US visa
+        <br>Yes 
 <input type="checkbox"  name="passcopy"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->passcopy == '1' ? 'checked' : '' }} >
                           No
@@ -419,10 +430,10 @@ Yes
 </form> 
 <br>
 
-<form action="/insert_consularfee" method="post">{{csrf_field()}}
+<form action="/insert_consularfee#visa1" method="post">{{csrf_field()}}
 
-        Consular fees: payment must be made in US$ per postal money order, cashier's check (payable to Embassy of Austria) or cash (exact change only please).
-        Yes 
+        -Consular fees: payment must be made in US$ per postal money order, cashier's check (payable to Embassy of Austria) or cash (exact change only please).
+        <br>Yes 
 <input type="checkbox"  name="consularfee"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->consularfee == '1' ? 'checked' : '' }} >
                           No
@@ -430,8 +441,9 @@ Yes
                          {{ $checklist[0]->consularfee == '0' ? 'checked' : '' }} >
 </form> 
 <br>
- Please see this page for more information <a href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
+ -Please see this page for more information <a href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
     
+    </div>
     </div>
     </div>
     
