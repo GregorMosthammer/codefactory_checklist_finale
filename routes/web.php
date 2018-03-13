@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/application', function () {
   return view('application');
 });
-
+Route::resource('success_enroll', 'success_enrollController');
 Route::resource('checklist', 'Controller');
 
 
@@ -68,7 +68,8 @@ Route::get('/insert_passcopy', 'Controller@insert_passcopy');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+
+
 
 Route::get('/email', 'HomeController@email')->name('sendEmail');
 Route::get('/email2', 'HomeController@email2');

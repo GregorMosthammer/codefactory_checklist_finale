@@ -85,7 +85,7 @@ return redirect ('checklist');
 });
 
    
-        return redirect ('checklist');
+        return redirect ('success_enroll');
     }}
 
 

@@ -77,37 +77,27 @@ var x = setInterval(function() {
 
 <nav class="navbar navbar-light bg-faded">
   <div class="row">
-
-<div class="col-lg-1 col-md-1 col-sm-1">
-</div>
-
-  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
+    <div class="col-lg-offset-1 col-lg-1 col-md-1 col-sm-4 col-xs-4">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="/img\logo.png" alt="LOGO" width="60px" height="70px">
+            <img src="/img\logo.png" alt="LOGO" width="100%" height="50px">
         </a>
     </div>
 
 
-    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-5">
+    <div class="col-lg-7 col-md-7 col-sm-4 col-xs-4">
         <p id="timer"></p>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    <div class="col-lg-1 col-md-1 col-sm-4 col-xs-4">
+        
+    </div>
+    
         <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <a href="https://www.youtube.com/channel/UCJE5xsfz-bLmVb5emobgOkw" class="fa fa-youtube-play" target="_blank"></a>
-        </div>
-</div>
-
-<div class="col-lg-1 col-md-1 col-sm-1">
-</div>
+    
+        <a href="https://twitter.com/CodeFactoryVIE" class="fa fa-twitter" target="_blank"></a>
+    
 
   </div>
-
 </nav>
-
 
 
 
