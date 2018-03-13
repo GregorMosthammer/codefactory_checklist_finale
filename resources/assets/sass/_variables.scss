@@ -524,9 +524,20 @@ div.polaroid {
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
   }
+  .text1 {
+	white-space: nowrap; 
+	
+	position: absolute;
+	overflow: hidden;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+  }
 
   #timer {
-	color: #831213;
+	  
+	text-shadow: 2px 2px 5px red;
 	text-align: center;
 	font-size: 30px;
 	margin-top:20px;
@@ -536,16 +547,17 @@ div.polaroid {
   .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
   .fa-anchor,.fa-coffee {font-size:200px}
   .w3-container{
-	  
+	text-shadow: 2px 2px 5px #831213;
 	  color: white;
-	  //background:  url(wien0.gif) no-repeat center center fixed; 
+	  background:  url(wien0.gif) no-repeat center center fixed; 
   background-size: cover;
 	  
   }
   .w3-contain{
-	padding:90px 16px;
+	text-shadow: 2px 2px 5px #831213;
+	padding:60px 16px;
 	color: white;
-	//background:  url(wien0.gif) no-repeat center center fixed; 
+	background:  url(wien0.gif) no-repeat center center fixed; 
   background-size: cover;
 	
 }
@@ -740,6 +752,8 @@ div.polaroid {
 		
 		&:focus { outline: 2px dotted #55d7dc; }
 	  }
+
+	  
 	  
 	  
 	

@@ -27,7 +27,7 @@
 
     <h1 class="welchead">What are you waiting for?</h1>
     <div class="w3-xlarge">
-    
+        <p>Become a web developer in the most beautiful city in Europe!</p>
         <p>Average Full-Stack Developer Salary $88,488</p>
         <p>In-Demand Career</p>
         <p>Life Changing Experience</p>
@@ -103,6 +103,11 @@
         <img src="/img\ceci.jpg" alt="ceci" width="100%" height="100%">
         <div class="overlay">
             <div class="text">-CECILIA TANZER</div>
+            <form class="text1" action="http://codefactory.academy/" target="_blank">
+            
+            
+            <button style="color: white; font-size: 20px;" class="btn draw-border">Click here to see our work</button>
+            </form>
         </div>
     </div> <!-- end for the pic div -->
     
@@ -114,7 +119,15 @@
         <img src="/img\stu.jpg" alt="stu" width="100%" height="100%">
         <div class="overlay">
             <div class="text">-THEODORA PATKOS</div>
+            
+            <form class="text1" action="http://codefactory.academy/" target="_blank">
+            
+            
+            <button style="color: white; font-size: 20px;" class="btn draw-border">Click here to see our work</button>
+            </form>
         </div>
+        
+           
     </div>
 </div><!-- end of the grey box for student -->
 </div><!-- end of student row -->
@@ -134,9 +147,9 @@
     <div class="col-lg-offset-3 col-lg-6">
         <h2 style="font-family: Chivo !important">Contact Us Here:</h2>
         <br>
-        <h4><a href="https://www.facebook.com/CodeFactoryVienna/">https://www.facebook.com/CodeFactoryVienna/</a></h4>
-        <h4><a href="office@codefactory.wien" target="_top">office@codefactory.wien</a></h4>
-        <h4><a  href="tel:+43-699-12255185">+43 699 12255185</a></h4>
+        <h4><a href="https://www.facebook.com/CodeFactoryVienna/"target="_blank">Facebook</a></h4>
+        <h4><a href="mailto:office@codefactory.wien" >office@codefactory.wien</a></h4>
+        <h4><a  href="tel:+43-699-12255185" target="_blank">+43 699 12255185</a></h4>
         
         
     
