@@ -200,6 +200,7 @@ var x = setInterval(function() {
     
     <a style="color:#831213;" href="https://www.usps.com/international/passports.htm" target="_blank">Link</a>
     <br>
+    <br>
     <label class="containe">
     Yes 
             <input type="checkbox"  name="passport"  value="1"  onchange="this.form.submit()"
@@ -234,6 +235,7 @@ We recommend getting approved, getting your VISA, and then taking the loan out.)
 <br>
 -I already have 18,500$ 
 <br>
+    <br>
 <label class="containe">
                         Yes 
             <input type="checkbox"  name="financing"  value="1"  onchange="this.form.submit()"
@@ -253,6 +255,7 @@ We recommend getting approved, getting your VISA, and then taking the loan out.)
 <form action="/insert_insurance#fina" method="post"> {{csrf_field()}}
 -Insurance form filled out?
 <br>
+    <br>
 <label class="containe">
                         Yes 
             <input type="checkbox"  name="insurance"  value="1"  onchange="this.form.submit()"
@@ -335,6 +338,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
   <form action="/insert_pass#visa" method="post">{{csrf_field()}} 
   -Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
   <br>
+    <br>
   <label class="containe"> Yes 
 <input type="checkbox"  name="pass"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->pass == '1' ? 'checked' : '' }} >
@@ -357,6 +361,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
         -Proof of travel insurance or health/accident insurance providing coverage in the Schengen countries: stating name of insurance company, type of coverage (sickness, accident, medical evacuation, repatriation of human remains), amount of coverage (minimum USD 50,000) and option of direct payment (insurance company must have a service provider in the Schengen area or an arrangement with a service provider in the Schengen area; no deductible, no reimbursement policy accepted) (We will provide this with the itinerary.)
         <br>
+    <br>
         <label class="containe">Yes 
 <input type="checkbox"  name="travelinsurance"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->travelinsurance == '1' ? 'checked' : '' }} >
@@ -374,6 +379,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
     <a style="color:#831213;" href="https://static1.squarespace.com/static/54b9309be4b06e38ad5da1ca/t/55e75a54e4b0c94c8afbdc59/1441225300774/Formular_D_Antrag.pdf" target="_blank">-D VISA Form</a>
     <br>
+    <br>
     <label class="containe"> Yes 
 <input type="checkbox"  name="visaform"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->visaform == '1' ? 'checked' : '' }} >
@@ -389,6 +395,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
  <form action="/insert_picture#visa1" method="post">{{csrf_field()}}
  -One (1) recent passport picture, which strictly has to meet the following criteria: max. head size 1.4 inch (36 mm), min. eye distance 0.3 inch (8mm), american picture format accepted.
  <br>
+    <br>
  <label class="containe"> Yes 
 <input type="checkbox"  name="picture"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->picture == '1' ? 'checked' : '' }} >
@@ -406,6 +413,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
         -Travel itinerary/ airline reservation (showing dates of travel) for entire journey. (These do not need to be booked. We will provide you with an itinerary.)
         <br>
+    <br>
         <label class="containe">Yes 
 <input type="checkbox"  name="travelreservation"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->travelreservation == '1' ? 'checked' : '' }} >
@@ -425,6 +433,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
 -Hotel reservation. (We will include this in our itinerary.)
 <br>
+    <br>
 <label class="containe">Yes 
 <input type="checkbox"  name="hotelreservation"  value="1"  onchange="this.form.submit()"
                   {{ $checklist[0]->hotelreservation == '1' ? 'checked' : '' }} >
@@ -445,6 +454,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
         -Letter of employment in the U.S.
         <br>
+    <br>
         <label class="containe">Yes 
 <input type="checkbox"  name="employment"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->employment == '1' ? 'checked' : '' }} >
@@ -469,6 +479,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
         -Proof of financial means (e.g. scholarship, letter of grants, bank statement of last two months, other proof of income). Include the letter of approval from the bank.
         <br>
+    <br>
         <label class="containe">Yes 
 <input type="checkbox"  name="financial_means"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->financial_means == '1' ? 'checked' : '' }} >
@@ -487,6 +498,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
         -Copy of the passport and copy of the "Green Card" or US visa
         <br>
+    <br>
         <label class="containe">Yes 
 <input type="checkbox"  name="passcopy"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->passcopy == '1' ? 'checked' : '' }} >
@@ -504,6 +516,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
         -Consular fees: payment must be made in US$ per postal money order, cashier's check (payable to Embassy of Austria) or cash (exact change only please).
         <br>
+    <br>
         <label class="containe">Yes 
 <input type="checkbox"  name="consularfee"  value="1"  onchange="this.form.submit()"
                           {{ $checklist[0]->consularfee == '1' ? 'checked' : '' }} >

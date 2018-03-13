@@ -65,7 +65,7 @@ class HomeController extends Controller
 
               )
             {
-              alert()->flash('Sorry, you will have to check everything with yes on youre checklist to be able to enroll!', 'error');
+              alert()->flash('Please make sure to provide all requirements to enroll!', 'error');
 
 return redirect ('checklist');
 
