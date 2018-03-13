@@ -82,8 +82,11 @@ return redirect ('checklist');
 {    
     
         $message->to($emails)->subject('Somebody Enroll');    
-});
 
+      
+});    
+       $id = Auth::id();
+       DB::table('checklist')->where('user_id', '=', $id)->update(['enroll' => '1']);
    
         return redirect ('success_enroll');
     }}

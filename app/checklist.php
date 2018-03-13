@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class checklist extends Model
 {
     protected $table = 'checklist';
-    protected $fillable = array('passport', 'financing', 'insurance', 'pass', 'visaform', 'picture', 'travelreservation', 'hotelreservation', 'employment', 'travelinsurance', 'financial_means', 'passcopy', 'consularfee', 'user_id', 'students_id');
+    protected $fillable = array('passport', 'financing', 'insurance', 'pass', 'visaform', 'picture', 'travelreservation', 'hotelreservation', 'employment', 'travelinsurance', 'financial_means', 'passcopy', 'consularfee', 'user_id', 'students_id', 'enroll');
 
     /**
      * Create or update a record matching the attributes, and fill it with values.

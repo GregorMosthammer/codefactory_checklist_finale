@@ -26,13 +26,13 @@ class Controller extends BaseController
       $id = Auth::id();
       $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
       $checklist = DB::table('checklist')->where('user_id','=', $id)->get();
+      $enroll = DB::table('checklist')->where('user_id','=', $id)->pluck('enroll');
 
+      
+    //  var_dump($enroll);
+     // exit();
 
-      /*
-      var_dump($checklist);
-      exit();
-*/
-      return View::make('checklist', compact('students', 'checklist', 'id')); 
+      return View::make('checklist', compact('students', 'checklist', 'id', 'enroll')); 
              
 
       }
