@@ -221,7 +221,7 @@ var x = setInterval(function() {
         <td><form action="{{ url('detail/' . $student->id )}}" method="post">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
-            <button>DELETE</button>
+            <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">DELETE</button>
             </form>  
         </td>  
 

@@ -121,7 +121,7 @@
 <form action="{{ url('myaccount/' . $students->id )}}" method="post">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
-            <button class="btn draw-border">DELETE</button>
+            <button onclick="return confirm('Are you sure you want to delete?')" class="btn draw-border">DELETE</button>
 </form> 
 
 
