@@ -36,6 +36,8 @@
     <!-- the button that send u to register -->
     
         <a href="{{url('/register')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">SIGN UP NOW!</a>
+        <br>
+        <br>
         <h3>Refer a friend and receive 10% off your cost up to $10,000</h3>
 
     </div>
