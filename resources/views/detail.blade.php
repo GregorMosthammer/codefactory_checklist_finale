@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<br>
 
  
 <div class="container-fluid">
@@ -85,7 +85,7 @@
 </div>
 </div>
 
-<div style="margin-top: 10px;" class="row">
+<div style="margin-top: 10px; margin-bottom: 50px;" class="row">
 <div class="col-md-5">
 </div>
 <input class="btn draw-border" type="submit" name="submit" value="Update">

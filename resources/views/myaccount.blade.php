@@ -101,9 +101,13 @@
 </div>
 </div>
 
-<div style="margin-top: 10px;" class="row">
-<div class="col-md-5">
+<div class="col-lg-5">
 </div>
+<div class="col-lg-1">
+<div style="margin-top: 20px;" class="row">
+
+
+
 
 <form method="post" type="submit" name="submit" value="UPDATE">
             
@@ -112,23 +116,40 @@
 </form> 
 
 
-
 </div>
-<div class="col-md-5">
-
 </div>
+
 
 </form> 
+<div class="col-lg-6">
+<div style="margin-top: 20px; margin-bottom: 50px;" class="row">
 <form action="{{ url('myaccount/' . $students->id )}}" method="post">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
             <button onclick="return confirm('Are you sure you want to delete?')" class="btn draw-border">DELETE</button>
 </form> 
 
-
+</div>
+</div>
 </div>
 
 
+
+
+
+<div class="row w3-contain w3-center">
+    <div class="col-lg-offset-3 col-lg-6">
+        <h2 style="font-family: Chivo !important">Contact Us Here:</h2>
+        <br>
+        <h4><a href="https://www.facebook.com/CodeFactoryVienna/"target="_blank">Facebook</a></h4>
+        <h4><a href="mailto:office@codefactory.wien" >office@codefactory.wien</a></h4>
+        <h4><a  href="tel:+43-699-12255185" target="_blank">+43 699 12255185</a></h4>
+        
+        
+    
+    <img src="/img\logo.png" alt="LOGO" width="120px" height="120px">
+    </div>
+</div>
 
 
 </body>

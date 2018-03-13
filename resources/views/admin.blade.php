@@ -192,7 +192,7 @@ var x = setInterval(function() {
 
 
 
-
+<br>
 @if (Auth::guard('admin')->check())
 <div class="container">
 {{--<div class="row">
