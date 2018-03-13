@@ -524,7 +524,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     <br><form style="text-align:center; margin-bottom: 20px" action="{{route('sendEmail')}} " >
             
             {{ csrf_field() }}
-           <input type="submit" name="submit" value="Enroll" <?php if ($enroll[0] == '1'){ ?> hidden <?php   } ?>>
+           <input class="btn draw-border" type="submit" name="submit" value="Enroll" <?php if ($enroll[0] == '1'){ ?> hidden <?php   } ?>>
             </form></div>
     </div>
 
