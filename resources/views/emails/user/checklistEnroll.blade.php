@@ -12,8 +12,7 @@ Kontoinhaber: CodeFactory GmbH<br>
 Adresse: Herklotzgasse 21, 1150 Wien<br>
 IBAN: AT412011182934111100<br>
 BIC/SWIFT GIBAATWWXXX<br>
- 
- 
+
  
 The Fullstack-course spans 15 weeks of full-time work, which means from 9 in the morning to 4 pm. Monday through Thursday, the training will occur in our office, attended by two trainers.
 Unless otherwise proclaimed, the course will happen at our office located at Kettenbrückengasse 21 / 2 / 12, 1050 Wien. Please bring your own Laptop, where our trainers will explain everything else to you on day 1.

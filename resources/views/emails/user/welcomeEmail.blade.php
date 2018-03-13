@@ -1,15 +1,15 @@
 @component('mail::message')
-# Welcome {{$user->name}}
+# Hello {{$user->name}}!
 
-here is should be the email text  **test**  _test_
-@component('mail::panel')
-The email address you signed up with is: {{$user->email}}
-@endcomponent
+Thank you for registering on our platform. Using this tool, we will guide you through the entire process of getting ready to start your new career as a Fullstack Web Developer in Europe's most beautiful city, Vienna! 
 
-@component('mail::button', ['url' => 'http://127.0.0.1:8000/checklist'])
-Button Text
-@endcomponent
+Within the platform, you will be guided to ......
+You can also alter your profiles information, by....
 
-Thanks,<br>
-{{ config('app.name') }}
+When you have positively fulfilled all the requirements necessary to enroll, please press the "Enroll" button to send your information to our CodeFactory team, which will contact you shortly.
+If you have further questions about the course, curriculum, course of events or other things, just writes us an eMail or call just call us, we will be happy to assist you :)
+
+ 
+ 
+We are looking forward to having you in our cohort! Happy Coding!
 @endcomponent
