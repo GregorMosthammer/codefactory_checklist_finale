@@ -153,20 +153,20 @@ var x = setInterval(function() {
                             
                                 
 
-                                
+                                <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
+                                    <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">MY ACCOUNT</a></li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            USER LOGOUT
+                                             LOGOUT
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
-                                    <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">MY ACCOUNT</a></li>
+                                    
                                
                             
                         @endif
@@ -308,7 +308,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     This course is 4 months long and will require a D VISA. The application process can take up to 15 days. We recommend applying 2 months before the course start date.
    
     
-    You can view a complete form and learn more about the process here: <a href="http://www.austria.org/visa-application/" target="_blank">austria.org/visa-application</a>
+    You can view a complete form and learn more about the process here: <a style="color:#831213;" href="http://www.austria.org/visa-application/" target="_blank">austria.org/visa-application</a>
 
     Please note that Coding Bootcamps are not recognized by the USA or Austria as accredited schools. You must apply for the D VISA as a tourist and state you are attending a bootcamp.
     
