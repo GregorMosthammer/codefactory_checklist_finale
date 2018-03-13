@@ -201,7 +201,7 @@ var x = setInterval(function() {
 </div>
 @endif
 
-
+<br>
 <div class="container-fluid">
   <div class="row">
     <div id="Apply" class="col-md-12">  
@@ -275,11 +275,11 @@ var x = setInterval(function() {
 <div style="margin-top: 10px;" class="row">
 <div class="col-lg-12" class="form-group">
  <label>Essay</label>
-<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="Please write a short description about where you are at in life and what do you hope to accomplish :)"></textarea>
+<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="please write us a short motivation essay about your goals"></textarea>
 </div>
 </div>
 
-<div style="margin-top: 10px;" class="row">
+<div style="margin-top: 10px; margin-bottom: 50px" class="row">
 
 
 

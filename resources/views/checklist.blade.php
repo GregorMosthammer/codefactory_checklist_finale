@@ -230,7 +230,7 @@ var x = setInterval(function() {
     <div class="row polaroid">
     <div class="col-md-4">
   
-    <img id="checkimg" src="/img\financing_insurance.jpg" alt="financing and insurance" width="100%"  height="310px">
+    <img id="checkimg" src="/img\financing_insurance.jpg" alt="financing and insurance" width="100%"  height="100%">
 
     </div>
     <div class="col-md-8" id="fina">
@@ -306,7 +306,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 <div class="row polaroid">
     <div class="col-md-4">
     
-    <img id="checkimg" src="/img\visa2.jpg" alt="visa" width="100%"  height="380px">
+    <img id="checkimg" src="/img\visa2.jpg" alt="visa" width="100%"  height="100%">
 
     </div>
     <div class="col-md-8">
