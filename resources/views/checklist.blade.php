@@ -26,13 +26,12 @@
 <!-- Optional theme -->
 
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
-       
+        
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -81,28 +80,26 @@ var x = setInterval(function() {
 <div class="col-lg-1 col-md-1 col-sm-1">
 </div>
 
-  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+  <div class="col-lg-9 col-md-8 col-sm-8 col-xs-7">
 
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-6">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="/img\logo.png" alt="LOGO" width="60px" height="70px">
         </a>
     </div>
 
 
-    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-5">
+    <div class="col-lg-11 col-md-10 col-sm-8 col-xs-6">
         <p id="timer"></p>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <a href="https://www.youtube.com/channel/UCJE5xsfz-bLmVb5emobgOkw" class="fa fa-youtube-play" target="_blank"></a>
-        </div>
+    
 </div>
 
-<div class="col-lg-1 col-md-1 col-sm-1">
-</div>
+<div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">
+        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
+        
+        <a href="https://www.youtube.com/channel/UCJE5xsfz-bLmVb5emobgOkw" class="fa fa-youtube-play" target="_blank"></a>
+        </div>
 
   </div>
 
@@ -115,7 +112,8 @@ var x = setInterval(function() {
     <nav id="navcolors">
             <div class="container">
                 <div class="navbar-header">
-
+                <div class="col-lg-1 col-md-1 col-sm-1">
+</div>
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -163,7 +161,6 @@ var x = setInterval(function() {
                                 
 
                                 <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
-                                    <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">MY ACCOUNT</a></li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -176,6 +173,7 @@ var x = setInterval(function() {
                                         </form>
                                     </li>
                                     
+                               
                                
                             
                         @endif
@@ -399,7 +397,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
                          {{ $checklist[0]->visaform == '0' ? 'checked' : '' }} ><span class="checkmark"></span>
                           </label>
 </form> 
-
+<br><br>
 <br>
  <form action="/insert_picture#visa1" method="post">{{csrf_field()}}
  -One (1) recent passport picture, which strictly has to meet the following criteria: max. head size 1.4 inch (36 mm), min. eye distance 0.3 inch (8mm), american picture format accepted.
@@ -481,7 +479,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
 
 
 
-
+<br><br>
 <div id="visa1">
 <br>
 <form action="/insert_financial_means#visa1" method="post">{{csrf_field()}}
@@ -519,7 +517,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
                          <span class="checkmark"></span>
                           </label>
 </form> 
-<br>
+<br><br><br>
 
 <form action="/insert_consularfee#visa1" method="post">{{csrf_field()}}
 
@@ -538,7 +536,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
                           </label>
 </form> 
 <br>
- -Please see this page for more information <a style="color:#831213;" href="http://www.austria.org/visa-application/" target="_blank">www.austria.org/visa-application</a>
+ -Please see this page for more information <br><a style="color:#831213;" href="http://www.austria.org/visa-application/" target="_blank">www.austria.org/visa-application</a>
  
     </div>
     </div>
@@ -546,7 +544,7 @@ Since we are a coding bootcamp, traditional student financing is not an option. 
     <br><form style="text-align:center; margin-bottom: 20px" action="{{route('sendEmail')}} " >
             
             {{ csrf_field() }}
-           <input class="btn draw-border" type="submit" name="submit" value="Enroll" <?php if ($enroll[0] == '1'){ ?> hidden <?php   } ?>>
+           <input  style="height:40px; width:200px;" class="btn draw-border" type="submit" name="submit" value="Enroll" <?php if ($enroll[0] == '1'){ ?> hidden <?php   } ?>>
             </form></div>
     </div>
 

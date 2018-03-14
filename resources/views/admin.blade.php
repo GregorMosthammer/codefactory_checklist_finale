@@ -31,14 +31,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Apr 9, 2018 09:00:00").getTime();
@@ -80,28 +80,26 @@ var x = setInterval(function() {
 <div class="col-lg-1 col-md-1 col-sm-1">
 </div>
 
-  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+  <div class="col-lg-9 col-md-8 col-sm-8 col-xs-7">
 
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-6">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="/img\logo.png" alt="LOGO" width="60px" height="70px">
         </a>
     </div>
 
 
-    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-5">
+    <div class="col-lg-11 col-md-10 col-sm-8 col-xs-6">
         <p id="timer"></p>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <a href="https://www.youtube.com/channel/UCJE5xsfz-bLmVb5emobgOkw" class="fa fa-youtube-play" target="_blank"></a>
-        </div>
+    
 </div>
 
-<div class="col-lg-1 col-md-1 col-sm-1">
-</div>
+<div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">
+        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
+        
+        <a href="https://www.youtube.com/channel/UCJE5xsfz-bLmVb5emobgOkw" class="fa fa-youtube-play" target="_blank"></a>
+        </div>
 
   </div>
 
@@ -110,12 +108,12 @@ var x = setInterval(function() {
 
 
 
-
     <div id="app">
     <nav id="navcolors">
             <div class="container">
                 <div class="navbar-header">
-
+                <div class="col-lg-1 col-md-1 col-sm-1">
+</div>
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -162,20 +160,20 @@ var x = setInterval(function() {
                             
                                 
 
-                                
+                                <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            USER LOGOUT
+                                             LOGOUT
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
                                     
+                               
                                
                             
                         @endif
@@ -186,7 +184,6 @@ var x = setInterval(function() {
 
         @yield('content')
     </div>
-
 
 
 
@@ -231,7 +228,7 @@ var x = setInterval(function() {
         <td><form action="{{ url('detail/' . $student->id )}}" method="post">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
-            <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">DELETE</button>
+            <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete your account?')">DELETE</button>
             </form>  
         </td>  
 

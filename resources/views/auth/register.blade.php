@@ -80,7 +80,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn draw-border">
+                                <button style="height:40px; width:190px;" type="submit" class="btn draw-border">
                                     Register
                                 </button>
                             </div>

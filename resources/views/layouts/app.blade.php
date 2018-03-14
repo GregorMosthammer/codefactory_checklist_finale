@@ -80,28 +80,26 @@ var x = setInterval(function() {
 <div class="col-lg-1 col-md-1 col-sm-1">
 </div>
 
-  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+  <div class="col-lg-9 col-md-8 col-sm-8 col-xs-7">
 
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-6">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="/img\logo.png" alt="LOGO" width="60px" height="70px">
         </a>
     </div>
 
 
-    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-5">
+    <div class="col-lg-11 col-md-10 col-sm-8 col-xs-6">
         <p id="timer"></p>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <a href="https://www.youtube.com/channel/UCJE5xsfz-bLmVb5emobgOkw" class="fa fa-youtube-play" target="_blank"></a>
-        </div>
+    
 </div>
 
-<div class="col-lg-1 col-md-1 col-sm-1">
-</div>
+<div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">
+        <a href="https://www.facebook.com/CodeFactoryVienna/" class="fa fa-facebook" target="_blank"></a>
+        
+        <a href="https://www.youtube.com/channel/UCJE5xsfz-bLmVb5emobgOkw" class="fa fa-youtube-play" target="_blank"></a>
+        </div>
 
   </div>
 
@@ -114,7 +112,8 @@ var x = setInterval(function() {
     <nav id="navcolors">
             <div class="container">
                 <div class="navbar-header">
-
+                <div class="col-lg-1 col-md-1 col-sm-1">
+</div>
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>

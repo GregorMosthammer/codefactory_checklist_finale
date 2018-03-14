@@ -555,7 +555,7 @@ div.polaroid {
   }
   .w3-contain{
 	text-shadow: 2px 2px 5px #831213;
-	padding:60px 16px;
+	padding:25px 16px;
 	color: white;
 	background:  url(wien0.gif) no-repeat center center fixed; 
   background-size: cover;
@@ -756,6 +756,7 @@ div.polaroid {
 		font: 700 1.2rem 'Roboto Slab', sans-serif;
 		padding: 1em 2em;
 		letter-spacing: 0.05rem;
+		
 		
 		
 		&:focus { outline: 2px dotted #55d7dc; }

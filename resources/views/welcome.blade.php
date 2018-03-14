@@ -22,7 +22,7 @@
 <!-- container opened -->
 <div class="container-fluid">
     <!-- for the red area -->
-    <div class="row w3-container w3-center" style="padding:70px 16px">
+    <div class="row w3-container w3-center" style="padding:20px 16px">
     <div class="col-lg-6 col-lg-offset-3">
 
     <h1 class="welchead">What are you waiting for?</h1>

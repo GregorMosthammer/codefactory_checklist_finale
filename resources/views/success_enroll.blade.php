@@ -8,7 +8,7 @@
             <br>
             <div class="row polaroid">
             
-                <center><h4>Thank you for enrolling successfully the Codefactory Team will contact you in some days.
+                <center><h4>Thank you for enrolling at the Codefactory! Our team will contact you via phone shortly to confirm all necessary details.
                 <br>
                 If you have questions or need more information feel free to contact us. </h4>
                <br>
