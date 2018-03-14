@@ -14,6 +14,7 @@ use App\Mail\checklistEnroll;
 use App\checklist;
 use Confirm;
 use Alert;
+use App\User;
 
 
 class HomeController extends Controller
@@ -70,18 +71,20 @@ class HomeController extends Controller
 return redirect ('checklist');
 
     }else{
+        $id = Auth::id();
+        $students = Students::where('user_id', '=', $id)->pluck('firstname', 'lastname');
+
 
               alert()->flash('Congratulations, you just enrolled @ CodeFactory!', 'success');
        Mail::to(Auth::user()->email)->send(new checklistEnroll());
 
-
         $emails = ['christoph.pirringer@codefactory.wien'];
 
 
-        Mail::send('emails.user.checklistEnroll', $emails, function($message) use ($emails)
+        Mail::send('emails.user.somebodyEnroll', $emails, function($message) use ($emails, $students)
 {    
     
-        $message->to($emails)->subject('Somebody Enroll');    
+        $message->to($emails)->subject($students ,'Enroll');    
 
       
 });    
