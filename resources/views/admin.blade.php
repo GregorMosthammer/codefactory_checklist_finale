@@ -250,8 +250,10 @@ var x = setInterval(function() {
 
 @endif
 <script>
+
 $(document).ready(function() {
     $('#example').DataTable({
+        responsive: true,
         "pageLength": 20,
         "order": [[ 1, "desc" ]]
     });
