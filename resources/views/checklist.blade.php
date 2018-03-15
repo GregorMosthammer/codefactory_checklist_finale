@@ -161,6 +161,7 @@ var x = setInterval(function() {
                                 
 
                                 <li class="nav-item active"><a class="nav-link" href="{{ url('/checklist') }}">CHECKLIST</a></li>
+                                    <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">MY ACCOUNT</a></li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
